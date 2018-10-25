@@ -34,5 +34,16 @@ public class CourseRepositoryImpl implements CourseRepositoryCustom {
 
     //TODO: get all coursese for a given customer
 
+    @Transactional
+    public List<Course> getAllCoursesForCustomer(Long customerId){
+        List<Course> results = null;
+        Session session = entityManager.unwrap(Session.class);
+        Criteria cr = session.createCriteria(Course.class);
+        cr.createAlias("bookings", "booking");
+        cr.add(Restrictions.eq("booking.customer.id", customerId));
+        results =cr.list();
+        return results;
+    }
+
 
 }

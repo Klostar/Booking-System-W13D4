@@ -49,4 +49,10 @@ public class BookingsystemApplicationTests {
 
 		}
 
+
+		@Test
+		public void getAllCoursesForCustomer(){
+		List<Course> results = courseRepository.getAllCoursesForCustomer(1L);
+		}
+
 	}

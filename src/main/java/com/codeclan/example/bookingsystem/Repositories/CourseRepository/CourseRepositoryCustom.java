@@ -9,4 +9,6 @@ public interface CourseRepositoryCustom {
 
     public List<Course> getAllCoursesWithAGivenRating(CourseRating rating);
 
+    public List<Course> getAllCoursesForCustomer(Long customerId);
+
 }

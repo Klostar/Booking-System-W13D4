@@ -9,4 +9,6 @@ import java.util.List;
 public interface CourseRepository extends JpaRepository<Course, Long>, CourseRepositoryCustom {
 
     public List<Course> getAllCoursesWithAGivenRating(CourseRating rating);
+
+    public List<Course> getAllCoursesForCustomer(Long customerId);
 }
