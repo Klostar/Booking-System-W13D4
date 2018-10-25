@@ -21,7 +21,7 @@ public class Course {
     @Column(name = "rating")
     private CourseRating rating;
 
-    @OneToMany(mappedBy = "course")
+    @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
     public Course(String courseName, String location, CourseRating rating) {
