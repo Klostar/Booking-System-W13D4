@@ -38,10 +38,10 @@ public class BookingsystemApplicationTests {
 		List<Course> results = courseRepository.getAllCoursesWithAGivenRating(CourseRating.FOUR);
 	}
 
-//	@Test
-//	public void getCustomersOnCourse(){
-//		List<Customer> results = customerRepository.getCustomersOnCourse(1L);
-//	}
+	@Test
+	public void getCustomersOnCourse(){
+		List<Customer> results = customerRepository.getCustomersOnCourse(1L);
+	}
 
 	@Test
 	public void getAllBookingsForDate(){

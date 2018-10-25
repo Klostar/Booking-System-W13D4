@@ -5,5 +5,5 @@ import com.codeclan.example.bookingsystem.models.Customer;
 import java.util.List;
 
 public interface CustomerRepositoryCustom {
-   // List<Customer> getCustomersOnCourse(Long courseId);
+   List<Customer> getCustomersOnCourse(Long courseId);
 }
