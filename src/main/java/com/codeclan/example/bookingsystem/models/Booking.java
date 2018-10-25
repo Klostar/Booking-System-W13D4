@@ -27,7 +27,7 @@ public class Booking {
     private Course course;
 
 
-    public Booking(String date) {
+    public Booking(String date, Customer customer, Course course) {
         this.date = date;
         this.customer = customer;
         this.course = course;
