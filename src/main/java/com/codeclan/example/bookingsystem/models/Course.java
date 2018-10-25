@@ -13,6 +13,10 @@ public class Course {
         this.rating = rating;
     }
 
+    public Course(){
+
+    }
+
     public Long getId() {
         return id;
     }
