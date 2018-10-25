@@ -38,5 +38,21 @@ public class CustomerRepositoryImpl implements CustomerRepositoryCustom {
 
     //TODO get all customers for a given town and course
 
+    @Transactional
+    public List<Customer> getCustomersInGivenTownForGivenCourse(String town, Long courseId) {
+        List<Customer> results = null;
+        Session session = entityManager.unwrap(Session.class);
+        Criteria cr = session.createCriteria(Customer.class);
+
+        cr.createAlias("bookings", "booking");
+        cr.createAlias("booking.course", "course");
+
+        cr.add(Restrictions.eq("booking.course.id", courseId));
+        cr.add(Restrictions.eq("course.town", town));
+
+        results = cr.list();
+        return results;
+    }
+
     //TODO get all customers over a certain age given town and course
 }

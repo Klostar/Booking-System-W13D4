@@ -22,4 +22,6 @@ public class CustomerController {
     public List<Customer> getCustomerOnCourse(@PathVariable Long id){
         return  customerRepository.getCustomersOnCourse(id);
     }
+
+
 }

@@ -18,8 +18,8 @@ public class Course {
 
     @Column(name = "course_name")
     private String courseName;
-    @Column(name = "location")
-    private String location;
+    @Column(name = "town")
+    private String town;
 
     @Column(name = "rating")
     private CourseRating rating;
@@ -28,9 +28,9 @@ public class Course {
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
-    public Course(String courseName, String location, CourseRating rating) {
+    public Course(String courseName, String town, CourseRating rating) {
         this.courseName = courseName;
-        this.location = location;
+        this.town = town;
         this.rating = rating;
         this.bookings = new ArrayList<>();
     }
@@ -55,12 +55,12 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public String getLocation() {
-        return location;
+    public String gettown() {
+        return town;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void settown(String town) {
+        this.town = town;
     }
 
     public CourseRating getRating() {

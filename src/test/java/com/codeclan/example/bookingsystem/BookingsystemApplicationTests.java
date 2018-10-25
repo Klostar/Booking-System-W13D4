@@ -55,4 +55,9 @@ public class BookingsystemApplicationTests {
 		List<Course> results = courseRepository.getAllCoursesForCustomer(1L);
 		}
 
-	}
+		@Test
+		public void getCustomersInGivenTownForGivenCourse(){
+			 List<Customer> results = customerRepository.getCustomersInGivenTownForGivenCourse("Edinburgh", 1L);
+		}
+
+}
