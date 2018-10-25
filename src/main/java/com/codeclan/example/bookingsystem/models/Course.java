@@ -1,14 +1,27 @@
 package com.codeclan.example.bookingsystem.models;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Entity
+@Table(name = "courses")
 public class Course {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "course_name")
     private String courseName;
+    @Column(name = "location")
     private String location;
+    @Column(name = "rating")
     private CourseRating rating;
+
+    @OneToMany(mappedBy = "course")
     private List<Booking> bookings;
 
     public Course(String courseName, String location, CourseRating rating) {
