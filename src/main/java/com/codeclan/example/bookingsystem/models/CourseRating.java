@@ -1,5 +1,8 @@
 package com.codeclan.example.bookingsystem.models;
 
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
 public enum CourseRating {
     ONE(1),
     TWO(2),
@@ -15,7 +18,10 @@ public enum CourseRating {
 
     public int getRating() {
         return rating;
+
     }
+
+
 }
 
 
