@@ -1,4 +1,4 @@
 package com.codeclan.example.bookingsystem.Repositories.CourseRepository;
 
-public class CourseRepositoryImpl {
+public class CourseRepositoryImpl implements CourseRepositoryCustom {
 }
