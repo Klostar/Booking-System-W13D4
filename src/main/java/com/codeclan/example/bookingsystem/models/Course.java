@@ -18,8 +18,10 @@ public class Course {
     private String courseName;
     @Column(name = "location")
     private String location;
+
     @Column(name = "rating")
     private CourseRating rating;
+
 
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
     private List<Booking> bookings;
