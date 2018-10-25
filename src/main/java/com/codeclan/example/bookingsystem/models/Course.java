@@ -1,16 +1,21 @@
 package com.codeclan.example.bookingsystem.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course {
 
     private Long id;
     private String courseName;
     private String location;
     private CourseRating rating;
+    private List<Booking> bookings;
 
     public Course(String courseName, String location, CourseRating rating) {
         this.courseName = courseName;
         this.location = location;
         this.rating = rating;
+        this.bookings = new ArrayList<>();
     }
 
     public Course(){
@@ -51,5 +56,13 @@ public class Course {
 
     public int getRatingValue(){
         return this.rating.getRating();
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 }
