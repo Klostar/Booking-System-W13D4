@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 
-public class DataLoader extends ApplicationRunner {
+public class DataLoader implements ApplicationRunner {
 
 
     @Autowired
